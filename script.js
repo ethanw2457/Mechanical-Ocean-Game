@@ -15,11 +15,10 @@ window.addEventListener('load', function(){
         console.log(this.game.keys);
       });
       window.addEventListener('keydown', e => {
-        if (e.key === 'ArrowUp'){
-          if(this.game.keys.indexOf(e.key) > -1){
-            this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
-          }
-        } 
+        if(this.game.keys.indexOf(e.key) > -1){
+          this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
+        }
+        console.log(this.game.keys);
       });
     }
   }
