@@ -9,10 +9,15 @@ window.addEventListener('load', function(){
     constructor(game){
       this.game = game;
       window.addEventListener('keydown', e => {
-        if(e.key === 'ArrowUp'){
+        if (e.key === 'ArrowUp'){
           this.game.keys.push(e.key);
         } 
         console.log(this.game.keys);
+      });
+      window.addEventListener('keydown', e => {
+        if (e.key === 'ArrowUp'){
+          if(this.game.keys.push(e.key))
+        } 
       });
     }
   }
