@@ -16,7 +16,9 @@ window.addEventListener('load', function(){
       });
       window.addEventListener('keydown', e => {
         if (e.key === 'ArrowUp'){
-          if(this.game.keys.indexOf(e.key))
+          if(this.game.keys.indexOf(e.key) > -1){
+            this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
+          }
         } 
       });
     }
