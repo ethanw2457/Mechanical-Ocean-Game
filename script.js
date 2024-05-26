@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
   // canvas set up
   const canvas = document.getElementById('canvas1');
   const ctx = canvas.getContext('2d');
-  canvas.width = 1500;
+  canvas.width = 500;
   canvas.height = 500;
 
   class InputHandler {
@@ -10,6 +10,9 @@ window.addEventListener('load', function(){
   }
   class Projectile {
     
+  }
+  class Particle {
+
   }
   class Player {
     constructor(game){
@@ -25,9 +28,6 @@ window.addEventListener('load', function(){
     draw(context){
       context.fillRect(this.x, this.y, this.width, this.height);
     }
-  }
-  class Particle {
-    
   }
   class Enemy {
     
