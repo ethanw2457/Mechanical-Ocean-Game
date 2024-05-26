@@ -9,7 +9,7 @@ window.addEventListener('load', function(){
     constructor(game){
       this.game = game;
       window.addEventListener('keydown', function(e){
-        
+        console.log(e.key);
       });
     }
   }
