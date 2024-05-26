@@ -21,6 +21,7 @@ window.addEventListener('load', function(){
       this.height = 190;
       this.x = 20;
       this.y = 100;
+      this.speedY = 0;
     }
     update(){
       this.y += this.speedY;
@@ -56,5 +57,5 @@ window.addEventListener('load', function(){
   }
 
 
-  const game = new Game();
+  const game = new Game(canvas.clientWidth, canvas.height);
 })
