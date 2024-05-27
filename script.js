@@ -159,7 +159,10 @@ window.addEventListener('load', function(){
       });
       this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
       if (this.enemyTimer > this.enemyInterval && !this.gameOver){
-        s
+        this.addEnemy();
+        this.enemyTimer = 0;
+      } else {
+        this.enemyTimer += deltaTime;
       }
     }
     draw(context){
