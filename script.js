@@ -177,7 +177,9 @@ window.addEventListener('load', function(){
       console.log(this.enemies);
     }
     checkCollisions(rect1, rect2){
-      return ()
+      return ( rect1.x < rect2.x + rect2.width &&
+        
+      )
     }
   }
 
@@ -191,7 +193,7 @@ window.addEventListener('load', function(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     game.update(deltaTime);
     game.draw(ctx);
-    requestAnimationFrame(animate);
+    //requestAnimationFrame(animate);
   }
   animate(0);
 })
