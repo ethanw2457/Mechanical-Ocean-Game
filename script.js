@@ -53,6 +53,8 @@ window.addEventListener('load', function(){
       this.height = 190;
       this.x = 20;
       this.y = 100;
+      this.frameX = 0;
+      this.frameY = 0;
       this.speedY = 0.2;
       this.maxSpeed = 3;
       this.projectiles = [];
@@ -72,7 +74,7 @@ window.addEventListener('load', function(){
     draw(context){
       context.fillStyle = 'black';
       context.fillRect(this.x, this.y, this.width, this.height);
-      context.drawImage(this.image, sx, this.speedY, sw, sh, this.x, this.y, this.width, this.height);
+      context.drawImage(this.image, sx, sy, sw, sh, this.x, this.y, this.width, this.height);
       this.projectiles.forEach(projectile => {
         projectile.draw(context);
       });
