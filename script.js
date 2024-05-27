@@ -173,8 +173,8 @@ window.addEventListener('load', function(){
                 this.score += enemy.score;
               }
             }
-          })
-        })
+          });
+        });
       });
       this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
       if (this.enemyTimer > this.enemyInterval && !this.gameOver){
@@ -189,7 +189,7 @@ window.addEventListener('load', function(){
       this.ui.draw(context);
       this.enemies.forEach(enemy => {
         enemy.draw(context);
-      })
+      });
     }
     addEnemy(){
       this.enemies.push(new Angler1(this));
@@ -216,4 +216,4 @@ window.addEventListener('load', function(){
     requestAnimationFrame(animate);
   }
   animate(0);
-})
+});
