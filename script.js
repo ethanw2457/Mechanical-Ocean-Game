@@ -77,7 +77,7 @@ window.addEventListener('load', function(){
     }
     shootTop(){
       if (this.game.ammo > 0){
-        this.projectiles.push(new Projectile(this.game, this.x + 80, this.y));
+        this.projectiles.push(new Projectile(this.game, this.x + 80, this.y + 30));
         this.game.ammo--;
       }
       
@@ -113,6 +113,7 @@ window.addEventListener('load', function(){
   }
 
   const game = new Game(canvas.clientWidth, canvas.height);
+  let lastTime = 0;
   // animation loop
   function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
