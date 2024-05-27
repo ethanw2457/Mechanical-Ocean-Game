@@ -178,8 +178,10 @@ window.addEventListener('load', function(){
       this.score = 0;
       this.winningScore = 10;
       this.gameTime = 0;
+      this.timeLimit = 5000;
     }
     update(deltaTime){
+      
       this.player.update();
       if (this.ammoTimer > this.ammoInterval){
         if (this.ammo < this.maxAmmo) this.ammo++;
