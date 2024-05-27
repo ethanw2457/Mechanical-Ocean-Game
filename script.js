@@ -129,6 +129,7 @@ window.addEventListener('load', function(){
     }
     draw(context){
       context.drawImage(this.image, this.x, this.y);
+      context.drawImage(this.image, this.x + this.width, this.y);
     }
   }
   
@@ -140,9 +141,9 @@ window.addEventListener('load', function(){
       this.image3 = document.getElementById('layer3');
       this.image4 = document.getElementById('layer4');
       this.layer1 = new Layer(this.game, this.image1, 1);
-      this.layer2 = new Layer(this.game, this.image2, 2);
-      this.layer3 = new Layer(this.game, this.image3, 3);
-      this.layer4 = new Layer(this.game, this.image4, 4);
+      this.layer2 = new Layer(this.game, this.image2, 1);
+      this.layer3 = new Layer(this.game, this.image3, 1);
+      this.layer4 = new Layer(this.game, this.image4, 1);
       this.layers = [this.layer1, this.layer2, this.layer3, this.layer4];
     }
     update(){
