@@ -68,6 +68,7 @@ window.addEventListener('load', function(){
       this.projectiles.forEach(projectile => {
         projectile.update();
       });
+      this.projectiles = this.projectiles.filter(projectile => !projectile.markedForDeletion);
     }
     draw(context){
       context.fillStyle = 'black';
