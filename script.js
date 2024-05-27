@@ -153,6 +153,7 @@ window.addEventListener('load', function(){
       this.score = 0;
       this.winningScore = 10;
     }
+    
     update(deltaTime){
       this.player.update();
       if (this.ammoTimer > this.ammoInterval){
@@ -167,7 +168,6 @@ window.addEventListener('load', function(){
           enemy.markedForDeletion = true;
         }
         this.enemies.forEach(enemy => {
-          enemy.update();
           if (this.checkCollisions(this.player, enemy)){
             enemy.markedForDeletion = true;
           }
