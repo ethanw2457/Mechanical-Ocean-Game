@@ -118,9 +118,14 @@ window.addEventListener('load', function(){
       this.game = game;
       this.image = image;
       this.speedModifier = speedModifier;
+      this.width = 1768;
+      this.height = 500;
+      this.x = 0;
       this.y = 0;
-      this.width = this.image.width;
-      this.height = this.image.height;
+    }
+    update(){
+      if (this.x <= -this.width) this.x = 0;
+      else this.x -= this.game.speed * this.speedModifier;
     }
   }
   
