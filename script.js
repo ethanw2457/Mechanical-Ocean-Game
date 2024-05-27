@@ -116,6 +116,7 @@ window.addEventListener('load', function(){
   let lastTime = 0;
   // animation loop
   function animate(){
+    const deltaTime = timeStamp - lastTime;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     game.update();
     game.draw(ctx);
