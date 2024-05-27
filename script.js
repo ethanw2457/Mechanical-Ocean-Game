@@ -152,7 +152,9 @@ window.addEventListener('load', function(){
           message2 = 'Try again next time!';
         }
         context.font = '50px ' + this.fontFamily;
-        context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5);
+        context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 40);
+        context.font = '25px ' + this.fontFamily;
+        context.fillText(message2, this.game.width * 0.5, this.game.height * 0.5);
       }
       context.restore();
     }
