@@ -192,7 +192,7 @@ window.addEventListener('load', function(){
       }
       this.enemies.forEach(enemy => {
         enemy.update();
-        if (this.checkCollision(this.player, enemy)){
+        if (this.checkCollisions(this.player, enemy)){
           enemy.markedForDeletion = true;
         }
         this.player.projectiles.forEach(projectile => {
