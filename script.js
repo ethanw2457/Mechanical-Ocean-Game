@@ -215,6 +215,7 @@ window.addEventListener('load', function(){
     update(deltaTime){
       if (!this.gameOver) this.gameTime += deltaTime;
       if (this.gameTime > this.timeLimit) this.gameOver = true;
+      this.background.update();
       this.player.update();
       if (this.ammoTimer > this.ammoInterval){
         if (this.ammo < this.maxAmmo) this.ammo++;
@@ -248,6 +249,7 @@ window.addEventListener('load', function(){
       }
     }
     draw(context){
+      this.background.draw();
       this.player.draw(context);
       this.ui.draw(context);
       this.enemies.forEach(enemy => {
