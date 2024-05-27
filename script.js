@@ -103,7 +103,7 @@ window.addEventListener('load', function(){
       // ammo
       context.fillStyle = this.color;
       for (let i = 0; i < this.game.ammo; i++){
-        context.fillRect(20, 50, 3, 20);
+        context.fillRect(20 + 5 * i, 50, 3, 20);
       }
     }
   }
@@ -131,6 +131,7 @@ window.addEventListener('load', function(){
     }
     draw(context){
       this.player.draw(context);
+      this.ui.draw(context);
     }
   }
 
