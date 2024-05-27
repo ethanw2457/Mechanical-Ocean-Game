@@ -86,6 +86,8 @@ window.addEventListener('load', function(){
   class Enemy {
     constructor(game){
       this.game = game;
+      this.x = this.game.width;
+      this.speedX = Math.random() * -1.5 - 0.5
     }
   }
   class Layer {
