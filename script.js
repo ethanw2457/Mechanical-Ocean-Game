@@ -127,6 +127,9 @@ window.addEventListener('load', function(){
       this.color = 'yellow';
     }
     draw(context){
+      context.font = this.fontSize + 'px ' + this.fontFamily;
+      //score
+      context.fillText(this.game.score, 20, 40);
       // ammo
       context.fillStyle = this.color;
       for (let i = 0; i < this.game.ammo; i++){
