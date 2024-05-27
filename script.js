@@ -193,6 +193,7 @@ window.addEventListener('load', function(){
     constructor(width, height){
       this.width = width;
       this.height = height;
+      this.background = new Background(this);
       this.player = new Player(this);
       this.input = new InputHandler(this);
       this.ui = new UI(this);
