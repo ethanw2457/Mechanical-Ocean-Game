@@ -140,9 +140,9 @@ window.addEventListener('load', function(){
       this.layers = [layer1];
     }
     update(){
-      this.layers.forEach
+      this.layers.forEach(layer => layer.update());
     }
-    draw(){
+    draw(context){
       
     }
   }
