@@ -88,6 +88,10 @@ window.addEventListener('load', function(){
       this.game = game;
       this.x = this.game.width;
       this.speedX = Math.random() * -1.5 - 0.5
+      this.markedForDeletion = false;
+    }
+    update(){
+      
     }
   }
   class Layer {
