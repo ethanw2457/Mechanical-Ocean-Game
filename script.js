@@ -56,6 +56,7 @@ window.addEventListener('load', function(){
       this.speedY = 0.2;
       this.maxSpeed = 3;
       this.projectiles = [];
+      this.image = document.getElementById('player');
     }
     update(){
       if (this.game.keys.includes('ArrowUp')) this.speedY = -this.maxSpeed;
