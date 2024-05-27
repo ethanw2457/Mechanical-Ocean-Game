@@ -99,6 +99,8 @@ window.addEventListener('load', function(){
     draw(context){
       context.fillStyle = 'red';
       context.fillRect(this.x, this.y, this.width, this.height);
+      context.fillStyle = 'black';
+      context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
     }
   }
