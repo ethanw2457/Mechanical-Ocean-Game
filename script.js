@@ -136,10 +136,10 @@ window.addEventListener('load', function(){
       //score
       context.fillText('Score: ' + this.game.score, 20, 40);
       // ammo
-      
       for (let i = 0; i < this.game.ammo; i++){
         context.fillRect(20 + 5 * i, 50, 3, 20);
       }
+      //game over messages
       context.restore();
     }
   }
