@@ -233,11 +233,11 @@ window.addEventListener('load', function(){
       }
       this.enemies.forEach(enemy => {
         enemy.update();
-        if (this.checkCollisions(this.player, enemy)){
+        if (this.checkCollision(this.player, enemy)){
           enemy.markedForDeletion = true;
         }
         this.player.projectiles.forEach(projectile => {
-          if (this.checkCollisions(projectile, enemy)){
+          if (this.checkCollision(projectile, enemy)){
             enemy.lives--;
             projectile.markedForDeletion = true;
             if (enemy.lives <= 0){
@@ -269,7 +269,7 @@ window.addEventListener('load', function(){
       this.enemies.push(new Angler1(this));
       console.log(this.enemies);
     }
-    checkCollisions(rect1, rect2){
+    checkCollision(rect1, rect2){
       return ( rect1.x < rect2.x + rect2.width &&
                rect1.x + rect1.width > rect2.x &&
                rect1.y < rect2.y + rect2.height &&
