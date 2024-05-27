@@ -176,7 +176,9 @@ window.addEventListener('load', function(){
       this.enemies.push(new Angler1(this));
       console.log(this.enemies);
     }
-    checkCollisions(rect1, rect2)
+    checkCollisions(rect1, rect2){
+      return ()
+    }
   }
 
   const game = new Game(canvas.clientWidth, canvas.height);
