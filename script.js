@@ -91,7 +91,12 @@ window.addEventListener('load', function(){
       this.markedForDeletion = false;
     }
     update(){
-      
+      this.x += this.speedX;
+      if (this.x + this.width < 0) this.markedForDeletion = true;
+    }
+    draw(context){
+      context.fillStyle = 'red';
+      context.fillRect(this.x, this.y, this.width, this.height);
     }
   }
   class Layer {
