@@ -143,7 +143,7 @@ window.addEventListener('load', function(){
       this.layers.forEach(layer => layer.update());
     }
     draw(context){
-      
+      this.layers.forEach(layer => layer.draw(context));
     }
   }
   class UI {
