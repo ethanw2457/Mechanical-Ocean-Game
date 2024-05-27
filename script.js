@@ -137,6 +137,13 @@ window.addEventListener('load', function(){
       this.game = game;
       this.image1 = document.getElementById('layer1');
       this.layer1 = new Layer(this.game, this.image1, 1);
+      this.layers = [layer1];
+    }
+    update(){
+      this.layers.forEach
+    }
+    draw(){
+      
     }
   }
   class UI {
