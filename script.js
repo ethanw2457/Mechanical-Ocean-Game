@@ -204,7 +204,7 @@ window.addEventListener('load', function(){
             projectile.markedForDeletion = true;
             if (enemy.lives <= 0){
               enemy.markedForDeletion = true;
-              if (this.gameOver) this.score += enemy.score;
+              if (!this.gameOver) this.score += enemy.score;
               if (this.score > this.winningScore) this.gameOver = true;
             }
           }
