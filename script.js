@@ -84,7 +84,9 @@ window.addEventListener('load', function(){
     }
   }
   class Enemy {
-    
+    constructor(game){
+      this.game = game;
+    }
   }
   class Layer {
     
@@ -97,7 +99,7 @@ window.addEventListener('load', function(){
       this.game = game;
       this.fontSize = 25;
       this.fontFamily = 'Helvetica';
-      this.color = 'white';
+      this.color = 'yellow';
     }
     draw(context){
       // ammo
