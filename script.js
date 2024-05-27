@@ -143,7 +143,7 @@ window.addEventListener('load', function(){
       this.layer1 = new Layer(this.game, this.image2, 5);
       this.layer1 = new Layer(this.game, this.image3, 5);
       this.layer1 = new Layer(this.game, this.image4, 5);
-      this.layers = [this.layer1];
+      this.layers = [this.layer1, this.layer2, this.layer3, this.layer4];
     }
     update(){
       this.layers.forEach(layer => layer.update());
