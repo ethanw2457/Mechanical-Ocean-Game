@@ -150,6 +150,8 @@ window.addEventListener('load', function(){
       this.ammoTimer = 0;
       this.ammoInterval = 500;
       this.gameover = false;
+      this.score = 0;
+      this.winningScore = 10;
     }
     update(deltaTime){
       this.player.update();
@@ -176,6 +178,7 @@ window.addEventListener('load', function(){
               if (enemy.lives <= 0){
                 enemy.markedForDeletion = true;
                 this.score += enemy.score;
+                if (this.score > this.winningScore) this.gameOver = true;
               }
             }
           });
