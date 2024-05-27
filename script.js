@@ -159,6 +159,7 @@ window.addEventListener('load', function(){
         if (this.checkCollision(this.player, enemy)){
           enemy.markedForDeletion = true;
         }
+        this.
       });
       this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
       if (this.enemyTimer > this.enemyInterval && !this.gameOver){
