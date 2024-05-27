@@ -140,9 +140,9 @@ window.addEventListener('load', function(){
       this.image3 = document.getElementById('layer3');
       this.image4 = document.getElementById('layer4');
       this.layer1 = new Layer(this.game, this.image1, 1);
-      this.layer1 = new Layer(this.game, this.image2, 2);
-      this.layer1 = new Layer(this.game, this.image3, 3);
-      this.layer1 = new Layer(this.game, this.image4, 4);
+      this.layer2 = new Layer(this.game, this.image2, 2);
+      this.layer3 = new Layer(this.game, this.image3, 3);
+      this.layer4 = new Layer(this.game, this.image4, 4);
       this.layers = [this.layer1, this.layer2, this.layer3, this.layer4];
     }
     update(){
