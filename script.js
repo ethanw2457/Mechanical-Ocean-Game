@@ -151,6 +151,8 @@ window.addEventListener('load', function(){
           message1 = 'You lose!';
           message2 = 'Try again next time!';
         }
+        context.font = '50px ' + this.fontFamily;
+        context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5);
       }
       context.restore();
     }
