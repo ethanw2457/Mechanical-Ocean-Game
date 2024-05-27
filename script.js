@@ -150,6 +150,9 @@ window.addEventListener('load', function(){
       } else {
         this.ammoTimer += deltaTime;
       }
+      this.enemies.forEach(enemy => {
+        enemy.update();
+      })
     }
     draw(context){
       this.player.draw(context);
