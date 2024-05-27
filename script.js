@@ -174,6 +174,7 @@ window.addEventListener('load', function(){
     }
     addEnemy(){
       this.enemies.push(new Angler1(this));
+      console.log(this.enemies);
     }
   }
 
