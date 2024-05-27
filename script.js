@@ -159,6 +159,12 @@ window.addEventListener('load', function(){
     draw(context){
       this.player.draw(context);
       this.ui.draw(context);
+      this.enemies.forEach(enemy => {
+        enemy.draw(context);
+      })
+    }
+    addEnemy(){
+      this.enemies.push(new Angler1(this));
     }
   }
 
