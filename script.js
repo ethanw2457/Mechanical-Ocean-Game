@@ -177,8 +177,8 @@ window.addEventListener('load', function(){
       this.gameOver = false;
       this.score = 0;
       this.winningScore = 10;
+      this.gameTime = 0;
     }
-    
     update(deltaTime){
       this.player.update();
       if (this.ammoTimer > this.ammoInterval){
