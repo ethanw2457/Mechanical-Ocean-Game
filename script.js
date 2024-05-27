@@ -127,6 +127,9 @@ window.addEventListener('load', function(){
       if (this.x <= -this.width) this.x = 0;
       else this.x -= this.game.speed * this.speedModifier;
     }
+    draw(context){
+      context.drawImage(this.image, this.x, this.y);
+    }
   }
   
   class Background {
