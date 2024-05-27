@@ -100,7 +100,12 @@ window.addEventListener('load', function(){
     }
   }
   class Angler1 extends Enemy {
-    s
+    constructor(game){
+      super(game);
+      this.width = 228;
+      this.height = 169;
+      this.y = Math.random() * (this.game.height * 0.9 - this.height);
+    }
   }
   
   class Layer {
