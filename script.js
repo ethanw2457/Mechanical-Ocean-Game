@@ -263,6 +263,7 @@ window.addEventListener('load', function(){
       this.enemies.forEach(enemy => {
         enemy.draw(context);
       });
+      this.background.layer4.draw(context);
     }
     addEnemy(){
       this.enemies.push(new Angler1(this));
