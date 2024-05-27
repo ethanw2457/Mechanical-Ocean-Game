@@ -99,6 +99,10 @@ window.addEventListener('load', function(){
       context.fillRect(this.x, this.y, this.width, this.height);
     }
   }
+  class Angler1 extends Enemy {
+    s
+  }
+  
   class Layer {
     
   }
