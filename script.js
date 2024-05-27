@@ -133,7 +133,11 @@ window.addEventListener('load', function(){
   }
   
   class Background {
-    
+    constructor(game){
+      this.game = game;
+      this.image1 = document.getElementById('layer1');
+      this.layer1 = new Layer(this.game, this.image1, 1);
+    }
   }
   class UI {
     constructor(game){
