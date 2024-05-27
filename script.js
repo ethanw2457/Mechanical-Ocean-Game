@@ -109,6 +109,12 @@ window.addEventListener('load', function(){
     }
     update(){
       this.player.update();
+      if (this.ammoTimer > this.ammoInterval){
+        if (this.ammo < this.maxAmmo) this.ammo++;
+        this.ammoTimer = 0;
+      } else {
+        this.ammoTimer += deltaTime;
+      }
     }
     draw(context){
       this.player.draw(context);
