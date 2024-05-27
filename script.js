@@ -76,6 +76,7 @@ window.addEventListener('load', function(){
     }
     shootTop(){
       this.projectiles.push(new Projectile(this.game, this.x, this.y));
+      console.log(this.projectiles);
     }
   }
   class Enemy {
