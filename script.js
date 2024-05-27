@@ -136,13 +136,13 @@ window.addEventListener('load', function(){
     constructor(game){
       this.game = game;
       this.image1 = document.getElementById('layer1');
-      this.image1 = document.getElementById('layer2');
-      this.image1 = document.getElementById('layer3');
-      this.image1 = document.getElementById('layer4');
-      this.layer1 = new Layer(this.game, this.image1, 5);
-      this.layer1 = new Layer(this.game, this.image2, 5);
-      this.layer1 = new Layer(this.game, this.image3, 5);
-      this.layer1 = new Layer(this.game, this.image4, 5);
+      this.image2 = document.getElementById('layer2');
+      this.image3 = document.getElementById('layer3');
+      this.image4 = document.getElementById('layer4');
+      this.layer1 = new Layer(this.game, this.image1, 1);
+      this.layer1 = new Layer(this.game, this.image2, 2);
+      this.layer1 = new Layer(this.game, this.image3, 3);
+      this.layer1 = new Layer(this.game, this.image4, 4);
       this.layers = [this.layer1, this.layer2, this.layer3, this.layer4];
     }
     update(){
