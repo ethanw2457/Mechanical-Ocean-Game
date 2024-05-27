@@ -94,7 +94,7 @@ window.addEventListener('load', function(){
   }
   class UI {
     constructor(game){
-      
+      this.game = game;
     }
   }
   class Game {
@@ -103,6 +103,7 @@ window.addEventListener('load', function(){
       this.height = height;
       this.player = new Player(this);
       this.input = new InputHandler(this);
+      this.ui = new UI(this);
       this.keys = [];
       this.ammo = 20;
       this.maxAmmo = 50;
