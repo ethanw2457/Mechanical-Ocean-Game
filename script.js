@@ -129,6 +129,9 @@ window.addEventListener('load', function(){
     draw(context){
       context.save();
       context.fillStyle = this.color;
+      context.shadowOffsetX = 2;
+      context.shadowOffsetY = 2;
+      context.shadowColor = 'black';
       context.font = this.fontSize + 'px ' + this.fontFamily;
       //score
       context.fillText('Score: ' + this.game.score, 20, 40);
