@@ -40,7 +40,8 @@ window.addEventListener('load', function(){
       this.speedY = 0.2;
     }
     update(){
-      if (this.game.keys.includes('ArrowUp'))
+      if (this.game.keys.includes('ArrowUp')) this.speedY = -1;
+      else if (this.game.keys.includes('ArrowDown')) this.speedY = 1;
       this.y += this.speedY;
     }
     draw(context){
