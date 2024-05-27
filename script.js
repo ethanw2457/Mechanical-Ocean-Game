@@ -140,7 +140,8 @@ window.addEventListener('load', function(){
         context.fillRect(20 + 5 * i, 50, 3, 20);
       }
       // timer
-      context.fillText('Timer: ' + this.game.gameTime, 20, 100);
+      const formattedTime = (this.game.gameTime * 0.001);
+      context.fillText('Timer: ' + formattedTime, 20, 100);
       //game over messages
       if (this.game.gameOver){
         context.textAlign = 'center';
