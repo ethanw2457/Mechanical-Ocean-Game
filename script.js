@@ -147,6 +147,9 @@ window.addEventListener('load', function(){
         if (this.game.score > this.game.winningScore){
           message1 = 'You Win!';
           message2 = 'Well done!';
+        } else {
+          message1 = 'You lose!';
+          message2 = 'Try again next time!';
         }
       }
       context.restore();
