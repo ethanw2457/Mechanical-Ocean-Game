@@ -154,6 +154,7 @@ window.addEventListener('load', function(){
       this.enemies.forEach(enemy => {
         enemy.update();
       });
+      this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
     }
     draw(context){
       this.player.draw(context);
