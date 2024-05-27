@@ -114,8 +114,16 @@ window.addEventListener('load', function(){
   }
   
   class Layer {
-    
+    constructor (game, image, speedModifier){
+      this.game = game;
+      this.image = image;
+      this.speedModifier = speedModifier;
+      this.y = 0;
+      this.width = this.image.width;
+      this.height = this.image.height;
+    }
   }
+  
   class Background {
     
   }
