@@ -223,6 +223,7 @@ window.addEventListener('load', function(){
       if (!this.gameOver) this.gameTime += deltaTime;
       if (this.gameTime > this.timeLimit) this.gameOver = true;
       this.background.update();
+      this.background.layer4.update();
       this.player.update();
       if (this.ammoTimer > this.ammoInterval){
         if (this.ammo < this.maxAmmo) this.ammo++;
