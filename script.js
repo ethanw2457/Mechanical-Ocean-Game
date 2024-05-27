@@ -195,6 +195,7 @@ window.addEventListener('load', function(){
       this.winningScore = 10;
       this.gameTime = 0;
       this.timeLimit = 5000;
+      this.speed = 1;
     }
     update(deltaTime){
       if (!this.gameOver) this.gameTime += deltaTime;
