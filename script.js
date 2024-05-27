@@ -16,13 +16,11 @@ window.addEventListener('load', function(){
         } else if ( e.key === ' '){
           this.game.player.shootTop();
         }
-        console.log(this.game.keys);
       });
       window.addEventListener('keyup', e =>{
         if(this.game.keys.indexOf(e.key) > -1){
           this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
         }
-        console.log(this.game.keys);
       });
     }
   }
@@ -78,8 +76,9 @@ window.addEventListener('load', function(){
       });
     }
     shootTop(){
-      this.projectiles.push(new Projectile(this.game, this.x, this.y));
-      console.log(this.projectiles);
+      if (this.game.ammo > 0){
+        this.projectiles.push(new Projectile(this.game, this.x, this.y));
+      }
     }
   }
   class Enemy {
