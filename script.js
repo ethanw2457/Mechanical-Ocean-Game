@@ -103,6 +103,9 @@ window.addEventListener('load', function(){
       this.input = new InputHandler(this);
       this.keys = [];
       this.ammo = 20;
+      this.maxAmmo = 50;
+      this.ammoTimer = 0;
+      this.ammoInterval = 500;
     }
     update(){
       this.player.update();
@@ -120,7 +123,7 @@ window.addEventListener('load', function(){
     console.log(deltaTime);
     lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    game.update();
+    game.update(deltaTime);
     game.draw(ctx);
     requestAnimationFrame(animate);
   }
