@@ -144,6 +144,7 @@ window.addEventListener('load', function(){
       this.maxAmmo = 50;
       this.ammoTimer = 0;
       this.ammoInterval = 500;
+      this.gameover = false;
     }
     update(deltaTime){
       this.player.update();
@@ -157,6 +158,9 @@ window.addEventListener('load', function(){
         enemy.update();
       });
       this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
+      if (this.enemyTimer > this.enemyInterval){
+        s
+      }
     }
     draw(context){
       this.player.draw(context);
