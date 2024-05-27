@@ -140,6 +140,15 @@ window.addEventListener('load', function(){
         context.fillRect(20 + 5 * i, 50, 3, 20);
       }
       //game over messages
+      if (this.game.gameOver){
+        context.textAlign = 'center';
+        let message1;
+        let message2;
+        if (this.game.score > this.game.winningScore){
+          message1 = 'You Win!';
+          message2 = 'Well done!';
+        }
+      }
       context.restore();
     }
   }
