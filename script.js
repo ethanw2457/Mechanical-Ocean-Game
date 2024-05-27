@@ -137,6 +137,7 @@ window.addEventListener('load', function(){
       this.input = new InputHandler(this);
       this.ui = new UI(this);
       this.keys = [];
+      this.enemies = [];
       this.ammo = 20;
       this.maxAmmo = 50;
       this.ammoTimer = 0;
@@ -152,7 +153,7 @@ window.addEventListener('load', function(){
       }
       this.enemies.forEach(enemy => {
         enemy.update();
-      })
+      });
     }
     draw(context){
       this.player.draw(context);
