@@ -136,8 +136,14 @@ window.addEventListener('load', function(){
     constructor(game){
       this.game = game;
       this.image1 = document.getElementById('layer1');
-      this.layer1 = new Layer(this.game, this.image1, 1);
-      this.layers = [layer1];
+      this.image1 = document.getElementById('layer2');
+      this.image1 = document.getElementById('layer3');
+      this.image1 = document.getElementById('layer4');
+      this.layer1 = new Layer(this.game, this.image1, 5);
+      this.layer1 = new Layer(this.game, this.image2, 5);
+      this.layer1 = new Layer(this.game, this.image3, 5);
+      this.layer1 = new Layer(this.game, this.image4, 5);
+      this.layers = [this.layer1];
     }
     update(){
       this.layers.forEach(layer => layer.update());
@@ -249,7 +255,7 @@ window.addEventListener('load', function(){
       }
     }
     draw(context){
-      this.background.draw();
+      this.background.draw(context);
       this.player.draw(context);
       this.ui.draw(context);
       this.enemies.forEach(enemy => {
