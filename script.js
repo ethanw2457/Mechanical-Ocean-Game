@@ -158,7 +158,7 @@ window.addEventListener('load', function(){
         enemy.update();
       });
       this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
-      if (this.enemyTimer > this.enemyInterval){
+      if (this.enemyTimer > this.enemyInterval && !this.gameOver){
         s
       }
     }
