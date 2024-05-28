@@ -418,6 +418,7 @@ window.addEventListener('load', function(){
         enemy.update();
         if (this.checkCollision(this.player, enemy)){
           enemy.markedForDeletion = true;
+          this.addExplosion(enemy);
           for (let i = 0; i < enemy.score; i++){
             this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
           }
@@ -434,6 +435,7 @@ window.addEventListener('load', function(){
                 this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
               }
               enemy.markedForDeletion = true;
+              this.addExplosion(enemy);
               if (enemy.type === 'hive'){
                 for (let i = 0; i < 5; i++){
                   this.enemies.push(new Drone(this, enemy.x + Math.random() * enemy.width, enemy.y + Math.random() * enemy.height * 0.5));
