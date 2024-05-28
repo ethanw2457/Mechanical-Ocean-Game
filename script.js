@@ -383,8 +383,8 @@ window.addEventListener('load', function(){
     }
     draw(context){
       this.background.draw(context);
-      this.player.draw(context);
       this.ui.draw(context);
+      this.player.draw(context);
       this.particles.forEach(particle => particle.draw(context));
       this.enemies.forEach(enemy => {
         enemy.draw(context);
