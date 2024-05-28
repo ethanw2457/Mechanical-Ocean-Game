@@ -78,7 +78,9 @@ window.addEventListener('load', function(){
     }
     draw(context){
       context.save();
-      context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, this.x, this.y, this.size, this.size);
+      context.translate(this.x, this.y);
+      context.rotate(this.angle);
+      context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, 0, 0, this.size, this.size);
       context.restore();
     }
   }
