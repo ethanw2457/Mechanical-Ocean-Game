@@ -315,6 +315,7 @@ window.addEventListener('load', function(){
 
   class SmokeExplosion extends Explosion {
     constructor(game, x, y){
+      super(game, x, y);
       this.image = document.getElementById('smokeExplosion');
       this.spriteWidth = 200;
       this.width = this.spriteWidth;
