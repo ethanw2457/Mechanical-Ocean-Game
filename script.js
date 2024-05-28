@@ -68,6 +68,10 @@ window.addEventListener('load', function(){
       this.speedY += this.gravity;
       this.x -= this.speedX;
       this.y += this.speedY;
+      if (this.y > this.game.height + this.size || this.x < 0 - this.size) this.markedForDeletion = true;
+    }
+    draw(context){
+      context.drawImage(this.image, this.x, this.y, this.size, this.size);
     }
   }
   class Player {
