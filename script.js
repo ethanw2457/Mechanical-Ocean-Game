@@ -101,8 +101,6 @@ window.addEventListener('load', function(){
       this.x = this.game.width;
       this.speedX = Math.random() * -1.5 - 0.5
       this.markedForDeletion = false;
-      this.lives = 5;
-      this.score = this.lives;
       this.frameX = 0;
       this.frameY = 0;
       this.maxFrame = 37;
@@ -130,6 +128,8 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
       this.image = document.getElementById('angler1');
       this.frameY = Math.floor(Math.random() * 3);
+      this.lives = 2;
+      this.score = this.lives;
     }
   }
   class Angler2 extends Enemy {
@@ -140,6 +140,8 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
       this.image = document.getElementById('angler2');
       this.frameY = Math.floor(Math.random() * 2);
+      this.lives = 3;
+      this.score = this.lives;
     }
   }
   
@@ -246,7 +248,7 @@ window.addEventListener('load', function(){
       this.score = 0;
       this.winningScore = 10;
       this.gameTime = 0;
-      this.timeLimit = 5000;
+      this.timeLimit = 15000;
       this.speed = 1;
       this.debug = true;
     }
