@@ -110,6 +110,10 @@ window.addEventListener('load', function(){
     update(){
       this.x += this.speedX;
       if (this.x + this.width < 0) this.markedForDeletion = true;
+      // sprite animation
+      if (this.frameX < this.maxFrame){
+        this.frameX++;
+      } else this.frameX = 0;
     }
     draw(context){
       if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
