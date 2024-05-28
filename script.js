@@ -249,7 +249,7 @@ window.addEventListener('load', function(){
       this.lives = 3;
       this.score = this.lives;
       this.type = 'drone';
-      this.speedX = Math.random() * -1.2 - 0.2;
+      this.speedX = Math.random() * -4.2 - 0.5;
     }
   }
   
