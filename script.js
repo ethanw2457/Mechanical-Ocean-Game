@@ -113,7 +113,7 @@ window.addEventListener('load', function(){
     }
     draw(context){
       if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
-      context.drawImage(this.image, this.x, this.y);
+      context.drawImage(this.image, this.x, this.y, this.width, this.height);
       context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
     }
@@ -121,8 +121,8 @@ window.addEventListener('load', function(){
   class Angler1 extends Enemy {
     constructor(game){
       super(game);
-      this.width = 228 * 0.2;
-      this.height = 169 * 0.2;
+      this.width = 228;
+      this.height = 169;
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
       this.image = document.getElementById('angler1');
       this.frameY = Math.floor(Math.random() * 3);
