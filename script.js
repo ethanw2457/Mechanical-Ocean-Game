@@ -299,7 +299,7 @@ window.addEventListener('load', function(){
       this.game = game;
       this.frameX = 0;
       this.spriteHeight = 200;
-      this.fps = 5;
+      this.fps = 30;
       this.timer = 0;
       this.interval = 1000/this.fps;
       this.markedForDeletion = false;
