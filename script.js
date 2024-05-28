@@ -305,6 +305,7 @@ window.addEventListener('load', function(){
       this.timer = 0;
       this.interval = 1000/this.fps;
       this.markedForDeletion = false;
+      this.maxFrame = 8;
     }
     update(deltaTime){
       this.frameX++;
@@ -312,6 +313,17 @@ window.addEventListener('load', function(){
     draw(context){
       context.drawImage(this.image, this.x, this.y);
     }
+  }
+
+  class SmokeExplosion extends Explosion {
+    constructor(game, x, y){
+      this.image = document.getElementById('smokeExplosion');
+      this.spriteWidth = 200;
+    }
+  }
+
+  class FireExplosion extends Explosion {
+    
   }
   
   class UI {
