@@ -297,8 +297,6 @@ window.addEventListener('load', function(){
   class Explosion {
     constructor(game, x, y){
       this.game = game;
-      this.x = x;
-      this.y = y;
       this.frameX = 0;
       this.spriteHeight = 200;
       this.fps = 15;
@@ -319,6 +317,10 @@ window.addEventListener('load', function(){
     constructor(game, x, y){
       this.image = document.getElementById('smokeExplosion');
       this.spriteWidth = 200;
+      this.width = this.spriteWidth;
+      this.height = this.spriteHeight;
+      this.x = x - this.width * 0.5;
+      this.y = y - this.height * 0.5;
     }
   }
 
