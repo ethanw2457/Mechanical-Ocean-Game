@@ -351,7 +351,7 @@ window.addEventListener('load', function(){
             if (enemy.lives <= 0){
               enemy.markedForDeletion = true;
               for (let i = 0; i < 10; i++){
-                this.particles.push(new Particle(this, enemy.x + enemy.y));
+                this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
               }
               if (!this.gameOver) this.score += enemy.score;
               if (this.score > this.winningScore) this.gameOver = true;
