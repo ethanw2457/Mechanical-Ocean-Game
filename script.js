@@ -109,8 +109,7 @@ window.addEventListener('load', function(){
       if (this.x + this.width < 0) this.markedForDeletion = true;
     }
     draw(context){
-      context.fillStyle = 'red';
-      context.fillRect(this.x, this.y, this.width, this.height);
+      context.strokeRect(this.x, this.y, this.width, this.height);
       context.fillStyle = 'black';
       context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
@@ -122,7 +121,8 @@ window.addEventListener('load', function(){
       this.width = 228 * 0.2;
       this.height = 169 * 0.2;
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
-      this.image = 
+      this.image = document.getElementById('angler1');
+      this.frameY = Math.floor(Math.random() * 3);
     }
   }
   
