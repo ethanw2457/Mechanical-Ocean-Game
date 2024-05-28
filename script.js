@@ -113,7 +113,7 @@ window.addEventListener('load', function(){
     }
     draw(context){
       if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
-      context.drawImage(this.image, this.x, this.y, this.width, this.height);
+      context.drawImage(this.image, sx, sy, sw, sh, this.x, this.y, this.width, this.height);
       context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
     }
