@@ -419,7 +419,7 @@ window.addEventListener('load', function(){
       }
       this.particles.forEach(particle => particle.update());
       this.particles = this.particles.filter(particle => !particle.markedForDeletion);
-      this.explosions.forEach(explosion => explosion.update());
+      this.explosions.forEach(explosion => explosion.update(deltaTime));
       this.explosions = this.explosions.filter(explosion => !explosion.markedForDeletion);
       this.enemies.forEach(enemy => {
         enemy.update();
@@ -484,8 +484,7 @@ window.addEventListener('load', function(){
     }
     addExplosion(enemy){
       const randomize = Math.random();
-      if (randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x, enemy.y));
-      console.log(this.explosions);
+      if (randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
     }
     checkCollision(rect1, rect2){
       return ( rect1.x < rect2.x + rect2.width &&
@@ -502,8 +501,8 @@ window.addEventListener('load', function(){
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    game.update(deltaTime);
     game.draw(ctx);
+    game.update(deltaTime);
     requestAnimationFrame(animate);
   }
   animate(0);
