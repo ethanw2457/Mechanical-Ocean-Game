@@ -62,6 +62,9 @@ window.addEventListener('load', function(){
       this.maxSpeed = 3;
       this.projectiles = [];
       this.image = document.getElementById('player');
+      this.powerUp = false;
+      this.powerUpTimer = 0;
+      this.powerUpLimit = 10000;
     }
     update(){
       if (this.game.keys.includes('ArrowUp')) this.speedY = -this.maxSpeed;
@@ -78,6 +81,16 @@ window.addEventListener('load', function(){
         this.frameX++;
       } else {
         this.frameX = 0;
+      }
+      // power up
+      if (this.powerUp){
+        if (this.powerUpTimer > this.powerUpLimit){
+          this.powerUpTimer = 0;
+          this.powerUp = false;
+          this.frameY = 0;
+        } else {
+          this.powerUpTimer += deltaTimer;
+        }
       }
     }
     draw(context){
