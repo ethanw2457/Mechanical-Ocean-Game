@@ -308,6 +308,7 @@ window.addEventListener('load', function(){
       this.ui = new UI(this);
       this.keys = [];
       this.enemies = [];
+      this.particles = [];
       this.enemyTimer = 0;
       this.enemyInterval = 1000;
       this.ammo = 20;
@@ -334,6 +335,8 @@ window.addEventListener('load', function(){
       } else {
         this.ammoTimer += deltaTime;
       }
+      this.particles.forEach(particle => particle.update());
+      this.particles = this.particles.filter(particle => !particle.markedForDeletion);
       this.enemies.forEach(enemy => {
         enemy.update();
         if (this.checkCollision(this.player, enemy)){
@@ -347,6 +350,9 @@ window.addEventListener('load', function(){
             projectile.markedForDeletion = true;
             if (enemy.lives <= 0){
               enemy.markedForDeletion = true;
+              for (let i = 0; i < 10; i++){
+                this.particles.push(new Particle(this, enemy.x + enemy.y));
+              }
               if (!this.gameOver) this.score += enemy.score;
               if (this.score > this.winningScore) this.gameOver = true;
             }
@@ -365,6 +371,7 @@ window.addEventListener('load', function(){
       this.background.draw(context);
       this.player.draw(context);
       this.ui.draw(context);
+      this.particles.forEach(particle => particle.draw(context));
       this.enemies.forEach(enemy => {
         enemy.draw(context);
       });
