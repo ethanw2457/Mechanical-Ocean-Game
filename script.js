@@ -238,11 +238,12 @@ window.addEventListener('load', function(){
     }
   }
   class Drone extends Enemy {
-    constructor(game){
+    constructor(game, x, y){
       super(game);
-      this.width = 400;
-      this.height = 227;
-      this.y = Math.random() * (this.game.height * 0.95 - this.height);
+      this.width = 115;
+      this.height = 95;
+      this.x = x;
+      this.y = y;
       this.image = document.getElementById('hivewhale');
       this.frameY = 0;
       this.lives = 15;
