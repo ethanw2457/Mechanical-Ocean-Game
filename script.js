@@ -293,6 +293,15 @@ window.addEventListener('load', function(){
       this.layers.forEach(layer => layer.draw(context));
     }
   }
+
+  class Explosion {
+    constructor(game, x, y){
+      this.game = game;
+      this.x = x;
+      this.y = y;
+    }
+  }
+  
   class UI {
     constructor(game){
       this.game = game;
