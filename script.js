@@ -110,7 +110,7 @@ window.addEventListener('load', function(){
     }
     draw(context){
       context.strokeRect(this.x, this.y, this.width, this.height);
-      context.fillStyle = 'black';
+      context.drawImage(this.image, this.x, this.y);
       context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
     }
