@@ -91,6 +91,7 @@ window.addEventListener('load', function(){
         } else {
           this.powerUpTimer += deltaTime;
           this.frameY = 1;
+          this.game.ammo += 0.1;
         }
       }
     }
