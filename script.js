@@ -63,7 +63,7 @@ window.addEventListener('load', function(){
       this.angle = 0;
       this.va = Math.random() * 0.2 - 0.1;
       this.bounced = 0;
-      this.bottomBounceBoundary = Math.WebTransportBidirectionalStream() * 100 + 60;
+      this.bottomBounceBoundary = Math.WebTransportBidirectionalStream() * 80 + 60;
     }
     update(){
       this.angle += this.va;
@@ -396,7 +396,6 @@ window.addEventListener('load', function(){
       if (randomize < 0.3) this.enemies.push(new Angler1(this));
       else if (randomize < 0.6) this.enemies.push(new Angler2(this));
       else this.enemies.push(new LuckyFish(this));
-      console.log(this.enemies);
     }
     checkCollision(rect1, rect2){
       return ( rect1.x < rect2.x + rect2.width &&
@@ -411,7 +410,6 @@ window.addEventListener('load', function(){
   // animation loop
   function animate(timeStamp){
     const deltaTime = timeStamp - lastTime;
-    console.log(deltaTime);
     lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     game.update(deltaTime);
