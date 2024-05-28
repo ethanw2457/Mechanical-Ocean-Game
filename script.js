@@ -314,6 +314,7 @@ window.addEventListener('load', function(){
     addEnemy(){
       const randomize = Math.random();
       if (randomize < 0.5) this.enemies.push(new Angler1(this));
+      else if (randomize < 0.3) this.enemies.push(new Angler2(this));
       else this.enemies.push(new Angler2(this));
       console.log(this.enemies);
     }
