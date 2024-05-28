@@ -299,13 +299,14 @@ window.addEventListener('load', function(){
       this.game = game;
       this.frameX = 0;
       this.spriteHeight = 200;
-      this.fps = 15;
+      this.fps = 5;
       this.timer = 0;
       this.interval = 1000/this.fps;
       this.markedForDeletion = false;
       this.maxFrame = 8;
     }
     update(deltaTime){
+      this.x -= this.game.speed;
       if (this.timer > this.interval){
         this.frameX++;
         this.timer = 0;
