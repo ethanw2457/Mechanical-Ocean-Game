@@ -55,6 +55,7 @@ window.addEventListener('load', function(){
       this.y = 100;
       this.frameX = 0;
       this.frameY = 0;
+      this.maxFrame = 37;
       this.speedY = 0.2;
       this.maxSpeed = 3;
       this.projectiles = [];
