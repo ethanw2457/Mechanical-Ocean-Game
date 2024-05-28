@@ -108,7 +108,9 @@ window.addEventListener('load', function(){
         this.game.ammo--;
       }
     }
-    enterPowerUp
+    enterPowerUp(){
+      this.powerUpTimer = 0;
+    }
   }
   class Enemy {
     constructor(game){
