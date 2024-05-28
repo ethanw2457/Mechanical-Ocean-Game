@@ -296,6 +296,8 @@ window.addEventListener('load', function(){
         enemy.update();
         if (this.checkCollision(this.player, enemy)){
           enemy.markedForDeletion = true;
+          if (enemy.type = 'lucky') this.player.enterPowerUp();
+          else this.score--;
         }
         this.player.projectiles.forEach(projectile => {
           if (this.checkCollision(projectile, enemy)){
