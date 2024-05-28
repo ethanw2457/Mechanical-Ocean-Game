@@ -226,10 +226,10 @@ window.addEventListener('load', function(){
   class HiveWhale extends Enemy {
     constructor(game){
       super(game);
-      this.width = 99;
-      this.height = 95;
+      this.width = 400;
+      this.height = 227;
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
-      this.image = document.getElementById('lucky');
+      this.image = document.getElementById('hivewhale');
       this.frameY = Math.floor(Math.random() * 2);
       this.lives = 3;
       this.score = 15;
