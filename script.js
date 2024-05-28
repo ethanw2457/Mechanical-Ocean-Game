@@ -80,7 +80,7 @@ window.addEventListener('load', function(){
       context.save();
       context.translate(this.x, this.y);
       context.rotate(this.angle);
-      context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, 0, 0, this.size, this.size);
+      context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, this.size * -0.5, this.size * -0.5, this.size, this.size);
       context.restore();
     }
   }
