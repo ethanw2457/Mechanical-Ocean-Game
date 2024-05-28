@@ -108,8 +108,15 @@ window.addEventListener('load', function(){
         this.game.ammo--;
       }
     }
+    shootBottom(){
+      if (this.game.ammo > 0){
+        this.projectiles.push(new Projectile(this.game, this.x + 80, this.y + 175));
+      }
+    }
     enterPowerUp(){
       this.powerUpTimer = 0;
+      this.powerUp = true;
+      this.game.ammo = this.game.maxAmmo;
     }
   }
   class Enemy {
