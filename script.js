@@ -392,13 +392,13 @@ window.addEventListener('load', function(){
             projectile.markedForDeletion = true;
             this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
             if (enemy.lives <= 0){
-              for (let i = 0; i < 10; i++){
+              for (let i = 0; i < enemy.score; i++){
                 this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
               }
               enemy.markedForDeletion = true;
               if (enemy.type === 'hive'){
                 for (let i = 0; i < 5; i++){
-                  this.enemies.push(new Drone(this, enemy.x, enemy.y));
+                  this.enemies.push(new Drone(this, enemy.x + Math.random() * enemy.width, enemy.y + Math.random() * enemy.height * 0.5));
                 }
               }
               if (!this.gameOver) this.score += enemy.score;
