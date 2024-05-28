@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
   // canvas set up
   const canvas = document.getElementById('canvas1');
   const ctx = canvas.getContext('2d');
-  canvas.width = 700;
+  canvas.width = 1000;
   canvas.height = 500;
 
   class InputHandler {
@@ -194,7 +194,7 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.95 - this.height);
       this.image = document.getElementById('angler1');
       this.frameY = Math.floor(Math.random() * 3);
-      this.lives = 2;
+      this.lives = 5;
       this.score = this.lives;
     }
   }
@@ -206,7 +206,7 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.95 - this.height);
       this.image = document.getElementById('angler2');
       this.frameY = Math.floor(Math.random() * 2);
-      this.lives = 3;
+      this.lives = 6;
       this.score = this.lives;
     }
   }
@@ -218,7 +218,7 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.95 - this.height);
       this.image = document.getElementById('lucky');
       this.frameY = Math.floor(Math.random() * 2);
-      this.lives = 3;
+      this.lives = 5;
       this.score = 15;
       this.type = 'lucky';
     }
@@ -231,7 +231,7 @@ window.addEventListener('load', function(){
       this.y = Math.random() * (this.game.height * 0.95 - this.height);
       this.image = document.getElementById('hivewhale');
       this.frameY = 0;
-      this.lives = 15;
+      this.lives = 20;
       this.score = this.lives;
       this.type = 'hive';
       this.speedX = Math.random() * -1.2 - 0.2;
