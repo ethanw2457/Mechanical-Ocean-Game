@@ -461,6 +461,9 @@ window.addEventListener('load', function(){
       this.enemies.forEach(enemy => {
         enemy.draw(context);
       });
+      this.enemies.forEach(explosion => {
+        explosion.draw(context);
+      });
       this.background.layer4.draw(context);
     }
     addEnemy(){
@@ -469,6 +472,10 @@ window.addEventListener('load', function(){
       else if (randomize < 0.6) this.enemies.push(new Angler2(this));
       else if (randomize < 0.8) this.enemies.push(new HiveWhale(this));
       else this.enemies.push(new LuckyFish(this));
+    }
+    addExplosion(enemy){
+      const randomize = Math.random();
+      if (this.randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x, enemy.y));
     }
     checkCollision(rect1, rect2){
       return ( rect1.x < rect2.x + rect2.width &&
