@@ -108,7 +108,7 @@ window.addEventListener('load', function(){
       this.maxFrame = 37;
     }
     update(){
-      this.x += this.speedX;
+      this.x += this.speedX - this.game.speed;
       if (this.x + this.width < 0) this.markedForDeletion = true;
       // sprite animation
       if (this.frameX < this.maxFrame){
