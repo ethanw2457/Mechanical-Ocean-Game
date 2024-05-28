@@ -331,7 +331,7 @@ window.addEventListener('load', function(){
       this.gameTime = 0;
       this.timeLimit = 15000;
       this.speed = 1;
-      this.debug = true;
+      this.debug = false;
     }
     update(deltaTime){
       if (!this.gameOver) this.gameTime += deltaTime;
@@ -354,7 +354,7 @@ window.addEventListener('load', function(){
           for (let i = 0; i < 10; i++){
             this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
           }
-          if (enemy.type = 'lucky') this.player.enterPowerUp();
+          if (enemy.type === 'lucky') this.player.enterPowerUp();
           else this.score--;
         }
         this.player.projectiles.forEach(projectile => {
