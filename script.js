@@ -71,6 +71,12 @@ window.addEventListener('load', function(){
         projectile.update();
       });
       this.projectiles = this.projectiles.filter(projectile => !projectile.markedForDeletion);
+      // sprite animation
+      if (this.frameX < this.maxFrame){
+        this.frameX++;
+      } else {
+        this.frameX = 0;
+      }
     }
     draw(context){
       context.fillStyle = 'black';
