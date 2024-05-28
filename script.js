@@ -66,7 +66,7 @@ window.addEventListener('load', function(){
       this.powerUpTimer = 0;
       this.powerUpLimit = 10000;
     }
-    update(){
+    update(deltaTime){
       if (this.game.keys.includes('ArrowUp')) this.speedY = -this.maxSpeed;
       else if (this.game.keys.includes('ArrowDown')) this.speedY = this.maxSpeed;
       else this.speedY = 0;
@@ -89,7 +89,7 @@ window.addEventListener('load', function(){
           this.powerUp = false;
           this.frameY = 0;
         } else {
-          this.powerUpTimer += deltaTimer;
+          this.powerUpTimer += deltaTime;
         }
       }
     }
