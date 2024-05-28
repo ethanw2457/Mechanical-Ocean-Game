@@ -244,7 +244,7 @@ window.addEventListener('load', function(){
       this.height = 95;
       this.x = x;
       this.y = y;
-      this.image = document.getElementById('hivewhale');
+      this.image = document.getElementById('drone');
       this.frameY = 0;
       this.lives = 15;
       this.score = this.lives;
