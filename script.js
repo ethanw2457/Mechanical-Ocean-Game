@@ -103,13 +103,16 @@ window.addEventListener('load', function(){
       this.markedForDeletion = false;
       this.lives = 5;
       this.score = this.lives;
+      this.frameX = 0;
+      this.frameY = 0;
+      this.maxFrame = 37;
     }
     update(){
       this.x += this.speedX;
       if (this.x + this.width < 0) this.markedForDeletion = true;
     }
     draw(context){
-      context.strokeRect(this.x, this.y, this.width, this.height);
+      if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
       context.drawImage(this.image, this.x, this.y);
       context.font = '20px Helvetica';
       context.fillText(this.lives, this.x, this.y);
