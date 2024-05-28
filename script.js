@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
           this.game.keys.push(e.key);
         } else if ( e.key === ' '){
           this.game.player.shootTop();
-        }
+        } else if (e.key === 'd')
       });
       window.addEventListener('keyup', e =>{
         if(this.game.keys.indexOf(e.key) > -1){
