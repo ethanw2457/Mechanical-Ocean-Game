@@ -107,8 +107,8 @@ window.addEventListener('load', function(){
         this.projectiles.push(new Projectile(this.game, this.x + 80, this.y + 30));
         this.game.ammo--;
       }
-      
     }
+    enterPowerUp
   }
   class Enemy {
     constructor(game){
