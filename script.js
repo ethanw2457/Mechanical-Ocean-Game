@@ -59,6 +59,9 @@ window.addEventListener('load', function(){
       this.speedX = Math.random() * 6 - 3;
       this.speedY = Math.random() * -15;
       this.gravity = 0.5;
+      this.markedForDeletion = false;
+      this.angle = 0;
+      this.va = Math.random() * 0.2 - 0.1;
     }
   }
   class Player {
