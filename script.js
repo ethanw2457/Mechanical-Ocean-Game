@@ -308,6 +308,7 @@ window.addEventListener('load', function(){
     update(deltaTime){
       if (this.timer > this.interval){
         this.frameX++;
+        this.timer = 0;
       } else {
         this.timer += deltaTime;
       }
