@@ -71,7 +71,7 @@ window.addEventListener('load', function(){
       if (this.y > this.game.height + this.size || this.x < 0 - this.size) this.markedForDeletion = true;
     }
     draw(context){
-      context.drawImage(this.image, this.x, this.y, this.size, this.size);
+      context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, this.x, this.y, this.size, this.size);
     }
   }
   class Player {
