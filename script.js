@@ -299,6 +299,18 @@ window.addEventListener('load', function(){
       this.game = game;
       this.x = x;
       this.y = y;
+      this.frameX = 0;
+      this.spriteHeight = 200;
+      this.fps = 15;
+      this.timer = 0;
+      this.interval = 1000/this.fps;
+      this.markedForDeletion = false;
+    }
+    update(deltaTime){
+      this.frameX++;
+    }
+    draw(context){
+      context.drawImage(this.image, this.x, this.y);
     }
   }
   
