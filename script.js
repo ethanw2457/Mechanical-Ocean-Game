@@ -383,6 +383,7 @@ window.addEventListener('load', function(){
       this.keys = [];
       this.enemies = [];
       this.particles = [];
+      this.explosions = [];
       this.enemyTimer = 0;
       this.enemyInterval = 1000;
       this.ammo = 20;
@@ -411,6 +412,8 @@ window.addEventListener('load', function(){
       }
       this.particles.forEach(particle => particle.update());
       this.particles = this.particles.filter(particle => !particle.markedForDeletion);
+      this.explosions.forEach(explosion => explosion.update());
+      this.explosions = this.explosions.filter(explosion => !explosion.markedForDeletion);
       this.enemies.forEach(enemy => {
         enemy.update();
         if (this.checkCollision(this.player, enemy)){
