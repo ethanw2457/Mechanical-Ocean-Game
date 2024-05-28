@@ -63,6 +63,12 @@ window.addEventListener('load', function(){
       this.angle = 0;
       this.va = Math.random() * 0.2 - 0.1;
     }
+    update(){
+      this.angle += this.va;
+      this.speedY += this.gravity;
+      this.x -= this.speedX;
+      this.y += this.speedY;
+    }
   }
   class Player {
     constructor(game){
