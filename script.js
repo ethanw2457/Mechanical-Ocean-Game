@@ -477,7 +477,8 @@ window.addEventListener('load', function(){
     }
     addExplosion(enemy){
       const randomize = Math.random();
-      if (this.randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x, enemy.y));
+      if (randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x, enemy.y));
+      console.log(this.explosions);
     }
     checkCollision(rect1, rect2){
       return ( rect1.x < rect2.x + rect2.width &&
