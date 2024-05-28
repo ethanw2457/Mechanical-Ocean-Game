@@ -396,6 +396,9 @@ window.addEventListener('load', function(){
                 this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
               }
               enemy.markedForDeletion = true;
+              if (enemy.type === 'hive'){
+                this.enemies.push(new Drone(this, enemy.x, enemy.y));
+              }
               if (!this.gameOver) this.score += enemy.score;
               if (this.score > this.winningScore) this.gameOver = true;
             }
