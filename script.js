@@ -63,7 +63,7 @@ window.addEventListener('load', function(){
       this.angle = 0;
       this.va = Math.random() * 0.2 - 0.1;
       this.bounced = 0;
-      this.bottomBounceBoundary = Math.WebTransportBidirectionalStream() * 80 + 60;
+      this.bottomBounceBoundary = Math.random() * 80 + 60;
     }
     update(){
       this.angle += this.va;
