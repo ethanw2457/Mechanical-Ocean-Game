@@ -62,8 +62,8 @@ window.addEventListener('load', function(){
       this.markedForDeletion = false;
       this.angle = 0;
       this.va = Math.random() * 0.2 - 0.1;
-      this.bounced = false;
-      this.bottomBounceBoundary = 100;
+      this.bounced = 0;
+      this.bottomBounceBoundary = Math.WebTransportBidirectionalStream() * 100 + 60;
     }
     update(){
       this.angle += this.va;
@@ -71,9 +71,9 @@ window.addEventListener('load', function(){
       this.x -= this.speedX;
       this.y += this.speedY;
       if (this.y > this.game.height + this.size || this.x < 0 - this.size) this.markedForDeletion = true;
-      if (this.y > this.game.height - this.bottomBounceBoundary && !this.bounced){
-        this.bounced = true;
-        this.speedY *= -0.5;
+      if (this.y > this.game.height - this.bottomBounceBoundary && this.bounced < 2){
+        this.bounced++;
+        this.speedY *= -0.7;
       }
     }
     draw(context){
