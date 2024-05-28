@@ -306,10 +306,15 @@ window.addEventListener('load', function(){
       this.maxFrame = 8;
     }
     update(deltaTime){
-      this.frameX++;
+      if (this.timer > this.interval){
+        this.frameX++;
+      } else {
+        this.timer += deltaTime;
+      }
+      if (this.frameX > this.maxFrame) this.markedForDeletion = true;
     }
     draw(context){
-      context.drawImage(this.image, this.x, this.y);
+      context.drawImage(this.image, this.frameX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
     }
   }
 
