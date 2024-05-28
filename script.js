@@ -297,6 +297,8 @@ window.addEventListener('load', function(){
       this.background.layer4.draw(context);
     }
     addEnemy(){
+      const randomize = Math.random();
+      if (randomize )
       this.enemies.push(new Angler1(this));
       console.log(this.enemies);
     }
