@@ -90,6 +90,7 @@ window.addEventListener('load', function(){
           this.frameY = 0;
         } else {
           this.powerUpTimer += deltaTime;
+          this.frameY = 1;
         }
       }
     }
@@ -283,7 +284,7 @@ window.addEventListener('load', function(){
       if (this.gameTime > this.timeLimit) this.gameOver = true;
       this.background.update();
       this.background.layer4.update();
-      this.player.update();
+      this.player.update(deltaTime);
       if (this.ammoTimer > this.ammoInterval){
         if (this.ammo < this.maxAmmo) this.ammo++;
         this.ammoTimer = 0;
