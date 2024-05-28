@@ -230,9 +230,9 @@ window.addEventListener('load', function(){
       this.height = 227;
       this.y = Math.random() * (this.game.height * 0.9 - this.height);
       this.image = document.getElementById('hivewhale');
-      this.frameY = Math.floor(Math.random() * 2);
-      this.lives = 3;
-      this.score = 15;
+      this.frameY = 0;
+      this.lives = 15;
+      this.score = this.lives;
       this.type = 'lucky';
     }
   }
