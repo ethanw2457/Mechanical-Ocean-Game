@@ -74,7 +74,7 @@ window.addEventListener('load', function(){
     draw(context){
       context.fillStyle = 'black';
       context.fillRect(this.x, this.y, this.width, this.height);
-      context.drawImage(this.image, this.frameX * this.width, sx, sy, sw, sh, this.x, this.y, this.width, this.height);
+      context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
       this.projectiles.forEach(projectile => {
         projectile.draw(context);
       });
