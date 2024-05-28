@@ -245,10 +245,10 @@ window.addEventListener('load', function(){
       this.x = x;
       this.y = y;
       this.image = document.getElementById('drone');
-      this.frameY = 0;
-      this.lives = 15;
+      this.frameY = Math.floor(Math.random() * 2);
+      this.lives = 3;
       this.score = this.lives;
-      this.type = 'hive';
+      this.type = 'drone';
       this.speedX = Math.random() * -1.2 - 0.2;
     }
   }
