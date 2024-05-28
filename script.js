@@ -397,7 +397,9 @@ window.addEventListener('load', function(){
               }
               enemy.markedForDeletion = true;
               if (enemy.type === 'hive'){
-                this.enemies.push(new Drone(this, enemy.x, enemy.y));
+                for (let i = 0; i < 5; i++){
+                  this.enemies.push(new Drone(this, enemy.x, enemy.y));
+                }
               }
               if (!this.gameOver) this.score += enemy.score;
               if (this.score > this.winningScore) this.gameOver = true;
