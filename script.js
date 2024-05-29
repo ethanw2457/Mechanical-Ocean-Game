@@ -1,3 +1,4 @@
+// Final Form
 window.addEventListener('load', function(){
   // canvas set up
   const canvas = document.getElementById('canvas1');
@@ -109,7 +110,7 @@ window.addEventListener('load', function(){
       this.y += this.speedY;
       // vertical boundaries
       if (this.y > this.game.height - this.height * 0.5) this.y = this.game.height - this.height * 0.5;
-      else if (this.y < this.height * 0.5) this.y = -this.height * 0.5;
+      else if (this.y < -this.height * 0.5) this.y = -this.height * 0.5;
       // Handle the projectiles
       this.projectiles.forEach(projectile => {
         projectile.update();
